@@ -23,7 +23,7 @@ const produtos = [
   },
 ];
 
-const listar_por_categoria = (categoria) => {
+/*const listar_por_categoria = (categoria) => {
   for (let i = 0; i < produtos.length; i++) {
     if (categoria == produtos[i].categoria) {
       console.log(produtos[i]);
@@ -33,4 +33,17 @@ const listar_por_categoria = (categoria) => {
   }
 };
 
-listar_por_categoria("Eletrônico");
+listar_por_categoria("Eletrônico");*/
+
+const listar_por_valor = (valor_minimo, valor_maximo) => {
+  for (let i = 0; i < produtos.length; i++) {
+    if (
+      produtos[i].valor >= valor_minimo &&
+      produtos[i].valor <= valor_maximo
+    ) {
+      console.log(produtos[i]);
+    }
+  }
+};
+
+listar_por_valor(7, 25);
